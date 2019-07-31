@@ -36,6 +36,8 @@ func main() {
 		sha1cmd.Run()
 	case "sha3.exe":
 		fallthrough
+	case "sha512.exe":
+		fallthrough
 	case "sha512":
 		sha512cmd.Run()
 	case "md5.exe":
