@@ -1,19 +1,16 @@
 package sha512cmd
 
 import (
+	"fmt"
 	"io"
 	"os"
 
 	"crypto/sha512"
 
 	"github.com/Urethramancer/signor/log"
-	"github.com/Urethramancer/signor/opt"
+	"github.com/grimdork/climate/arg"
+	ll "github.com/grimdork/loglines"
 )
-
-var Options struct {
-	opt.DefaultHelp
-	Files []string `placeholder:"FILE" help:"Full path to file to checksum."`
-}
 
 func sha512sum(file string) {
 	hash := sha512.New()
@@ -26,7 +23,7 @@ func sha512sum(file string) {
 
 	_, err = io.Copy(hash, in)
 	if err != nil {
-		log.Default.Err("md5: couldn't copy %s: %s", file, err.Error())
+		ll.Err("sha512: couldn't copy %s: %s", file, err.Error())
 		os.Exit(2)
 	}
 
@@ -35,13 +32,22 @@ func sha512sum(file string) {
 
 // Run the checksummer.
 func Run() {
-	a := opt.Parse(&Options)
-	if Options.Help || len(Options.Files) == 0 {
-		a.Usage()
-		return
+	opt := arg.New("sha512")
+	opt.SetDefaultHelp(true)
+	opt.SetPositional("FILE", "Filename to process.", "", true, arg.VarStringSlice)
+	err := opt.Parse(os.Args[1:])
+	if err != nil {
+		if err == arg.ErrNoArgs {
+			opt.PrintHelp()
+			return
+		}
+
+		fmt.Printf("Error: %s\n", err.Error())
+		os.Exit(2)
 	}
 
-	for _, fn := range Options.Files {
+	args := opt.GetPosStringSlice("FILE")
+	for _, fn := range args {
 		sha512sum(fn)
 	}
 }
