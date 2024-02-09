@@ -4,7 +4,7 @@ go 1.22rc1
 
 require (
 	github.com/Urethramancer/signor v0.17.0
-	github.com/grimdork/climate v0.11.0
+	github.com/grimdork/climate v0.12.0
 	github.com/grimdork/loglines v1.0.1
 	github.com/mgutz/str v1.2.0
 )

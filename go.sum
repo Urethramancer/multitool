@@ -2,8 +2,8 @@ github.com/Urethramancer/cross v0.5.1/go.mod h1:fDdlBbOHyb78KkGBNSM3auQbWBtLt0Qz
 github.com/Urethramancer/daemon v0.3.0/go.mod h1:/T1hacQ495iR95N1l6qtceUY2i6gtcEwcemi6WGJ0n8=
 github.com/Urethramancer/signor v0.17.0 h1:kH7FduwbjM8Bu99rvRJm5bT52IH8UbGqDaw7FGRaSks=
 github.com/Urethramancer/signor v0.17.0/go.mod h1:A8scGHYye/A3YEL8kasLWcfDHSQSZhQKgWHLaabqJfI=
-github.com/grimdork/climate v0.11.0 h1:W4z23FOK6mNtYb+/TptenBbE48WuYkiO/ugzPKWmna4=
-github.com/grimdork/climate v0.11.0/go.mod h1:Z1qOEtko3gCPaRjVptOlUFfDcP2X1ir2JxfGXu3+68s=
+github.com/grimdork/climate v0.12.0 h1:z8lYHvwgd+wxpNRye/xtIrDzAJya0mqy2qyNYRbH6jQ=
+github.com/grimdork/climate v0.12.0/go.mod h1:Z1qOEtko3gCPaRjVptOlUFfDcP2X1ir2JxfGXu3+68s=
 github.com/grimdork/loglines v1.0.1 h1:QgcQcHmNwT4eQ4akS3XI/JHAyP6s6StREC8tcU6m+fM=
 github.com/grimdork/loglines v1.0.1/go.mod h1:1x8hNXpwr74Gq2rlqH0Sd82YTgGAx2PynkJ37j9DaGY=
 github.com/grimdork/str v1.0.2 h1:qiztJ1W5x4htu5X9ag6yYx0j2ey9CKL30J3pUnVJvoU=
