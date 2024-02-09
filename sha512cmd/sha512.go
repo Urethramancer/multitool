@@ -1,7 +1,6 @@
 package sha512cmd
 
 import (
-	"fmt"
 	"io"
 	"os"
 
@@ -35,17 +34,7 @@ func Run() {
 	opt := arg.New("sha512")
 	opt.SetDefaultHelp(true)
 	opt.SetPositional("FILE", "Filename to process.", "", true, arg.VarStringSlice)
-	err := opt.Parse(os.Args[1:])
-	if err != nil {
-		if err == arg.ErrNoArgs {
-			opt.PrintHelp()
-			return
-		}
-
-		fmt.Printf("Error: %s\n", err.Error())
-		os.Exit(2)
-	}
-
+	opt.HelpOrFail()
 	args := opt.GetPosStringSlice("FILE")
 	for _, fn := range args {
 		sha512sum(fn)

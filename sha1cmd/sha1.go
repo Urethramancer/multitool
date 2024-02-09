@@ -2,7 +2,6 @@ package sha1cmd
 
 import (
 	"crypto/sha1"
-	"fmt"
 	"io"
 	"os"
 
@@ -33,17 +32,7 @@ func Run() {
 	opt := arg.New("sha1")
 	opt.SetDefaultHelp(true)
 	opt.SetPositional("FILE", "Filename to process.", "", true, arg.VarStringSlice)
-	err := opt.Parse(os.Args[1:])
-	if err != nil {
-		if err == arg.ErrNoArgs {
-			opt.PrintHelp()
-			return
-		}
-
-		fmt.Printf("Error: %s\n", err.Error())
-		os.Exit(2)
-	}
-
+	opt.HelpOrFail()
 	args := opt.GetPosStringSlice("FILE")
 	for _, fn := range args {
 		sha1sum(fn)
