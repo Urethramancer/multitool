@@ -6,13 +6,8 @@ import (
 	"os"
 
 	"github.com/Urethramancer/signor/log"
-	"github.com/Urethramancer/signor/opt"
+	"github.com/grimdork/climate/arg"
 )
-
-var Options struct {
-	opt.DefaultHelp
-	Files []string `placeholder:"FILE" help:"Full path to file to checksum."`
-}
 
 func md5sum(file string) {
 	hash := md5.New()
@@ -34,13 +29,12 @@ func md5sum(file string) {
 
 // Run the checksummer.
 func Run() {
-	a := opt.Parse(&Options)
-	if Options.Help || len(Options.Files) == 0 {
-		a.Usage()
-		return
-	}
-
-	for _, fn := range Options.Files {
+	opt := arg.New("md5")
+	opt.SetDefaultHelp(true)
+	opt.SetPositional("FILE", "Filename to process.", "", true, arg.VarStringSlice)
+	opt.HelpOrFail()
+	args := opt.GetPosStringSlice("FILE")
+	for _, fn := range args {
 		md5sum(fn)
 	}
 }
