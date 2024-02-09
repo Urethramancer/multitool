@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/Urethramancer/multitool/md5cmd"
-	"github.com/Urethramancer/multitool/pwgen"
+	pwgen "github.com/Urethramancer/multitool/pwgencmd"
 	"github.com/Urethramancer/multitool/rn"
 	"github.com/Urethramancer/multitool/sha1cmd"
 	"github.com/Urethramancer/multitool/sha512cmd"
