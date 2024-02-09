@@ -2,7 +2,7 @@
 A grab-bag of functionality for the command line.
 
 ## What's this for?
-I made this to run on routers or other tiny devices with limited CLI tools and options for installing such.
+I made this to run on routers or other tiny devices with limited CLI tools and options for installing such. Compatible with TinyGo, but access to other packages may be a limitation.
 
 ## How to install
 First download the package:
