@@ -9,4 +9,4 @@ require (
 	github.com/mgutz/str v1.2.0
 )
 
-require github.com/grimdork/str v1.0.1 // indirect
+require github.com/grimdork/str v1.0.2 // indirect

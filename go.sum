@@ -6,7 +6,7 @@ github.com/grimdork/climate v0.10.7 h1:tY/LkvbucukemNWyevoIHtbrk+eyQB8RKcN8jIUjv
 github.com/grimdork/climate v0.10.7/go.mod h1:Z1qOEtko3gCPaRjVptOlUFfDcP2X1ir2JxfGXu3+68s=
 github.com/grimdork/loglines v1.0.1 h1:QgcQcHmNwT4eQ4akS3XI/JHAyP6s6StREC8tcU6m+fM=
 github.com/grimdork/loglines v1.0.1/go.mod h1:1x8hNXpwr74Gq2rlqH0Sd82YTgGAx2PynkJ37j9DaGY=
-github.com/grimdork/str v1.0.1 h1:1LJRk0SHB65LgiUFGHm9eq/WNpZYbNXJ733peg9/K2A=
-github.com/grimdork/str v1.0.1/go.mod h1:MoFNACllXqLUTqGL6gWvB3dyyyyt5Jn5IFMEPfIgLgs=
+github.com/grimdork/str v1.0.2 h1:qiztJ1W5x4htu5X9ag6yYx0j2ey9CKL30J3pUnVJvoU=
+github.com/grimdork/str v1.0.2/go.mod h1:MoFNACllXqLUTqGL6gWvB3dyyyyt5Jn5IFMEPfIgLgs=
 github.com/mgutz/str v1.2.0 h1:4IzWSdIz9qPQWLfKZ0rJcV0jcUDpxvP4JVZ4GXQyvSw=
 github.com/mgutz/str v1.2.0/go.mod h1:w1v0ofgLaJdoD0HpQ3fycxKD1WtxpjSo151pK/31q6w=
